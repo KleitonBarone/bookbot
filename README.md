@@ -44,10 +44,12 @@ mkdir books
 Run the analysis on your book:
 
 ```bash
+# Analyze a specific file
+python main.py path/to/your/book.txt
+
+# Use the default sample book (books/frankenstein.txt)
 python main.py
 ```
-
-> **Note:** By default, the program analyzes `books/frankenstein.txt`. You can modify the `path_to_file` variable in `main.py` to analyze different files.
 
 ## 📊 Sample Output
 
