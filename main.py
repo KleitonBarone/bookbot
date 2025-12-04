@@ -1,3 +1,6 @@
+import sys
+
+
 def get_book_text(path):
     with open(path) as f:
         return f.read()
@@ -34,7 +37,11 @@ def print_report(path_to_file, word_count, letter_count_list):
     print("--- End report ---")
 
 def main():
-    path_to_file = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        path_to_file = "books/frankenstein.txt"
+    else:
+        path_to_file = sys.argv[1]
+
     file_contents = get_book_text(path_to_file)
     word_count = get_word_count(file_contents)
     letter_count = count_letter_occurrences(file_contents)
